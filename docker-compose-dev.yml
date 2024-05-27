@@ -8,7 +8,7 @@ services:
       - "3000:3000"
     volumes:
       - /usr/src/app/node_modules
-      - ~/docker-github-app:/usr/src/app
+      - /usr/src/app
     stdin_open: true
 
   tests:
@@ -17,5 +17,5 @@ services:
       dockerfile: Dockerfile.dev
     volumes:
       - /usr/src/app/node_modules
-      - ~/docker-github-app:/usr/src/app
+      - /usr/src/app
     command: ["npm", "run", "test"]
