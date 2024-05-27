@@ -1,6 +1,6 @@
 from node:16-alpine as builder
 
-workdir '/app'
+workdir /app
 
 copy package.json .
 
